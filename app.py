@@ -25,10 +25,10 @@ st.write("Enter match statistics for two teams to get a professional analysis, A
 # ==========================================
 # قاموس للشعارات (يمكنك إضافة المزيد من الفرق هنا لاحقاً)
 LOGO_DICT = {
-    "Real Madrid": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/150px-Real_Madrid_CF.svg.png",
-    "FC Barcelona": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/150px-FC_Barcelona_%28crest%29.svg.png",
-    "Egypt": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Egypt_national_football_team_logo.svg/150px-Egypt_national_football_team_logo.svg.png",
-    "Greece": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Greece_national_football_team_logo.svg/150px-Greece_national_football_team_logo.svg.png"
+    "Egypt": "egypt.png",
+    "Greece": "greece.png",
+    "Real Madrid": "real_madrid.png",
+    "FC Barcelona": "fc_barcelona.png"
 }
 
 def team_inputs(label, key, emoji, default_name):

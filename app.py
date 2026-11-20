@@ -25,10 +25,10 @@ st.write("Enter match statistics for two teams to get a professional analysis, A
 # ==========================================
 # قاموس للشعارات (يمكنك إضافة المزيد من الفرق هنا لاحقاً)
 LOGO_DICT = {
-    "Real Madrid": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
-    "FC Barcelona": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
-    "Egypt": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Egypt_national_football_team_logo.svg",
-    "Greece": "https://upload.wikimedia.org/wikipedia/en/4/4e/Greece_national_football_team_logo.svg"
+    "Real Madrid": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/150px-Real_Madrid_CF.svg.png",
+    "FC Barcelona": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/150px-FC_Barcelona_%28crest%29.svg.png",
+    "Egypt": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Egypt_national_football_team_logo.svg/150px-Egypt_national_football_team_logo.svg.png",
+    "Greece": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Greece_national_football_team_logo.svg/150px-Greece_national_football_team_logo.svg.png"
 }
 
 def team_inputs(label, key, emoji, default_name):
@@ -36,8 +36,8 @@ def team_inputs(label, key, emoji, default_name):
     name = st.text_input("Team name", value=default_name, key=f"name_{key}")
     
     # عرض الشعار ديناميكياً إذا كان الاسم موجوداً في القاموس
-    if name in LOGO_DICT:
-        st.image(LOGO_DICT[name], width=100)
+    if name.strip().title() in LOGO_DICT:
+      st.image(LOGO_DICT[name.strip().title()], width=100)  
     else:
         st.write("🔍 *(Logo not found for this team)*")
         
